@@ -9,19 +9,35 @@
 }
 
 #container strong {
-  font-size: 20px;
+  font-size: 26px;
   line-height: 26px;
 }
 
 #container p {
-  font-size: 16px;
+  font-size: 22px;
   line-height: 22px;
 
   color: #8c8c8c;
 
-  margin: 0;
+  margin-top: 10px;
 }
 
-#container a {
-  text-decoration: none;
+ion-title {
+  font-size: 40px;
+  text-align: center;
+}
+
+ion-content {
+  --background: none !important;
+  background: url('/assets/starry-sky.jpg') no-repeat center center !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+ion-header,
+ion-toolbar,
+ion-title {
+  padding-top: 10px;
+  --background: none !important;
+  background: transparent !important;
 }
