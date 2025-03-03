@@ -6,6 +6,7 @@ import { SleepModalComponent } from '../modals/sleep-modal/sleep-modal.component
 import { SleepData } from '../data/sleep-data';
 import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
+import {SleepinessModalComponent} from "../modals/sleepiness-modal/sleepiness-modal.component";
 
 @Component({
   selector: 'app-home',
@@ -54,8 +55,12 @@ export class HomePage {
     await modal.present();
   }
 
-  logSleepiness() {
-    console.log('Opening sleepiness tracker...');
+  async logSleepiness() {
+    const modal = await this.modalController.create({
+      component: SleepinessModalComponent,
+      cssClass: ['auto-height', 'bottom']
+    });
+    await modal.present();
   }
 
 	/* Ionic doesn't allow bindings to static variables, so this getter can be used instead. */

@@ -1,0 +1,30 @@
+<div class="inner-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Log Sleepiness</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <p>How sleepy do you feel right now?</p>
+
+    <div class="sleepiness">
+      <ion-range
+        [min]="1"
+        [max]="7"
+        [step]="1"
+        [snaps]="true"
+        [ticks]="true"
+        [(ngModel)]="sleepinessLevel">
+      </ion-range>
+      <p>Sleepiness Level: {{ sleepinessLevel }}</p>
+      <p>{{ scaleDescription }}</p>
+    </div>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button shape="round" color="light" (click)="recordSleepiness()">Record</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</div>
