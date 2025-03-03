@@ -1,0 +1,43 @@
+<div class="inner-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Log Sleep</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <p>How did you sleep last night?</p>
+
+    <div class="sleep">
+      <div class="sleep-hours">
+        <p>Fell Asleep At...</p>
+        <ion-item>
+          <ion-label>Date: </ion-label>
+          <ion-input type="date" [(ngModel)]="fellAsleepDate"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Time: </ion-label>
+          <ion-input type="time" [(ngModel)]="fellAsleepTime"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="sleep-hours">
+        <p>Woke Up At...</p>
+        <ion-item>
+          <ion-label>Date: </ion-label>
+          <ion-input type="date" [(ngModel)]="wokeUpDate"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Time: </ion-label>
+          <ion-input type="time" [(ngModel)]="wokeUpTime"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button shape="round" color="light" (click)="recordSleep()">Record</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+</div>
