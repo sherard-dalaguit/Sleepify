@@ -8,6 +8,8 @@
   <div id="container">
     <p>How did you sleep last night?</p>
 
+    <ion-text color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-text>
+
     <div class="sleep">
       <div class="sleep-hours">
         <p>Fell Asleep At...</p>

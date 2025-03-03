@@ -57,3 +57,13 @@ ion-modal.auto-height.bottom {
         }
     }
 }
+
+@media (max-width: 400px) {
+    ion-modal.auto-height.bottom {
+        --height: 80vh;
+
+        .modal-wrapper {
+            border-radius: 0;
+        }
+    }
+}
