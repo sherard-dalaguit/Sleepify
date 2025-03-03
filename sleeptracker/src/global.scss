@@ -35,3 +35,25 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+ion-modal.auto-height.bottom {
+    align-items: flex-end;
+    --height: 65vh;
+
+    .modal-wrapper {
+        width: 100%;
+        height: var(--height);
+        border-radius: 16px 16px 0 0;
+        margin: 0;
+    }
+
+    .ion-page {
+        display: block;
+        height: 100%;
+
+        .inner-content {
+            max-height: 80vh;
+            overflow: auto;
+        }
+    }
+}

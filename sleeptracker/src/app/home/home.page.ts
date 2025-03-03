@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import { SleepService } from '../services/sleep.service';
 import { DatePipe } from '@angular/common';
+import {IonicModule, ModalController} from '@ionic/angular';
+import { SleepModalComponent } from '../modals/sleep-modal/sleep-modal.component';
 import { SleepData } from '../data/sleep-data';
 import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
@@ -11,13 +12,13 @@ import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   providers: [DatePipe],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent],
+  imports: [IonicModule],
   standalone: true
 })
 export class HomePage {
   currentTime: string = '';
 
-  constructor(public sleepService:SleepService, private datePipe: DatePipe) {
+  constructor(public sleepService:SleepService, private datePipe: DatePipe, private modalController: ModalController) {
 
 	}
 
@@ -43,6 +44,18 @@ export class HomePage {
     } else {
       return 'Good Night';
     }
+  }
+
+  async logSleep() {
+    const modal = await this.modalController.create({
+      component: SleepModalComponent,
+      cssClass: ['auto-height', 'bottom']
+    });
+    await modal.present();
+  }
+
+  logSleepiness() {
+    console.log('Opening sleepiness tracker...');
   }
 
 	/* Ionic doesn't allow bindings to static variables, so this getter can be used instead. */
