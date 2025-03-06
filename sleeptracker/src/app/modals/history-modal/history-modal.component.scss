@@ -1,0 +1,66 @@
+body, ion-title, ion-footer, ion-button {
+  font-family: 'Nunito', sans-serif;
+  text-shadow: 0 0 10px #ffffff;
+  background: #343a40 !important;
+}
+
+ion-header,
+ion-toolbar,
+ion-title {
+  --background: none !important;
+  background: transparent !important;
+}
+
+.inner-content {
+  height: 100%;
+}
+
+ion-content p {
+  font-size: 22px;
+  text-align: center;
+}
+
+ion-header {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: #212529 !important;
+}
+
+ion-title {
+  font-size: 26px;
+  text-align: center;
+}
+
+ion-content {
+  width: 100%;
+  text-shadow: none;
+  --background: #343a40 !important;
+  --padding-bottom: 40%;
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+ion-button {
+  width: 80%;
+  margin: 20px auto;
+}
+
+ion-toolbar,
+ion-footer {
+  --border-width: 0 !important;
+  --border-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}

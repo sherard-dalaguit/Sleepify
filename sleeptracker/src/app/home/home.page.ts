@@ -7,6 +7,7 @@ import { SleepData } from '../data/sleep-data';
 import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
 import {SleepinessModalComponent} from "../modals/sleepiness-modal/sleepiness-modal.component";
+import {HistoryModalComponent} from "../modals/history-modal/history-modal.component";
 
 @Component({
   selector: 'app-home',
@@ -58,6 +59,14 @@ export class HomePage {
   async logSleepiness() {
     const modal = await this.modalController.create({
       component: SleepinessModalComponent,
+      cssClass: ['auto-height', 'bottom']
+    });
+    await modal.present();
+  }
+
+  async viewHistory() {
+    const modal = await this.modalController.create({
+      component: HistoryModalComponent,
       cssClass: ['auto-height', 'bottom']
     });
     await modal.present();
