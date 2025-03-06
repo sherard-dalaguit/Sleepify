@@ -58,8 +58,12 @@ ion-range {
 
 ion-footer {
   position: absolute;
-  top: 80%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  margin: 0;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
