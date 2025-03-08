@@ -38,6 +38,14 @@ ion-content {
   --padding-bottom: 40%;
 }
 
+ion-card {
+  background: #212529 !important;
+  color: #ffffff;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #ffffff;
+}
+
 ion-footer {
   position: absolute;
   bottom: 0;
