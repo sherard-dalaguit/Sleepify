@@ -71,4 +71,4 @@ n/a
 I used Ionic Storage to save the logged data locally on the user's device. It persists in the device's storage so the data remains available across app sessions.
 
 14. How does your app implement or follow principles of good mobile design?
-My app follows good mobile design principles by using Ionic's native components for responsive layouts, intuitive navigation, and clear visual hierarchy. It minimizes clutter with different modals and segmented controls for data entry and history viewing, while storing data for persistent access, ensuring a smooth, user-friendly experience.
+My app follows good mobile design principles by presenting a clear, uncluttered initial home page that leverages Ionic's native components for responsive layouts and intuitive navigation. It minimizes clutter through the use of modals for data entry and segmented controls for viewing sleep history, all while maintaining a consistent color and design theme that enhances usability and creates a smooth, user-friendly experience.
